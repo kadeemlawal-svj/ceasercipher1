@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <main class="cipher-box">
+        <h1>Caesar Cipher</h1>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Type a message"></textarea>
+
+        <label for="key">Key (1 to 25)</label>
+        <input id="key" type="number" min="1" max="25" step="1" value="3">
+
+        <div class="buttons">
+            <button id="encrypt-button" type="button">Encrypt</button>
+            <button id="decrypt-button" type="button">Decrypt</button>
+        </div>
+
+        <div id="result" class="result" role="status" aria-live="polite"></div>
+    </main>
+</body>
+</html>
